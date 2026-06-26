@@ -1,0 +1,25 @@
+<!-- templates/encrypt.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Encrypt Image</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <h2>Encrypt Your Message into an Image</h2>
+  <form action="/encrypt" method="post" enctype="multipart/form-data">
+    <label>Upload Image:</label><br>
+    <input type="file" name="image" accept="image/*" required><br><br>
+
+    <label>Enter Encryption Key:</label><br>
+    <input type="text" name="key" required><br><br>
+
+    <label>Enter Message to Encrypt:</label><br>
+    <textarea name="message" rows="4" cols="40" required></textarea><br><br>
+
+    <input type="submit" value="Encrypt">
+  </form>
+  <br>
+  <a href="/decrypt">Go to Decryption Page</a>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!-- templates/decrypt.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Decrypt Image</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <h2>Decrypt Message from Image</h2>
+  <form action="/decrypt" method="post" enctype="multipart/form-data">
+    <label>Upload Encrypted Image:</label><br>
+    <input type="file" name="image" accept="image/*" required><br><br>
+
+    <label>Enter Decryption Key:</label><br>
+    <input type="text" name="key" required><br><br>
+
+    <input type="submit" value="Decrypt">
+  </form>
+  <br>
+  <a href="/">Go to Encryption Page</a>
+</body>
+</html>
